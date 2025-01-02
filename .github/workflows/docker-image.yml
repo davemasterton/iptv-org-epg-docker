@@ -23,5 +23,3 @@ jobs:
           DOCKER_TAG=latest
           docker build . -t $IMAGE_NAME:$DOCKER_TAG
           docker push $IMAGE_NAME:$DOCKER_TAG
-      - name: Docker image cleanup
-        run: docker rmi $IMAGE_NAME:$DOCKER_TAG
