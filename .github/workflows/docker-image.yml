@@ -19,7 +19,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN}}
       - name: Build and push Docker image
         run: |
-          IMAGE_NAME=ghcr.io/${GITHUB_REPOSITORY}/${GITHUB_REPOSITORY##*/}
+          IMAGE_NAME=ghcr.io/${GITHUB_REPOSITORY}/iptv-org-epg-docker
           DOCKER_TAG=latest
           docker build . -t $IMAGE_NAME:$DOCKER_TAG
           docker push $IMAGE_NAME:$DOCKER_TAG
