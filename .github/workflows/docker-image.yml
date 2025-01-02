@@ -16,7 +16,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
-          password: ${{ secrets.PAT_FOR_GITHUB_REGISTRY }}
+          password: ${{ secrets.GITHUB_TOKEN}}
       - name: Build and push Docker image
         run: |
           IMAGE_NAME=ghcr.io/${GITHUB_REPOSITORY}/${GITHUB_REPOSITORY##*/}
